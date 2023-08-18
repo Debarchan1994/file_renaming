@@ -4,12 +4,12 @@ import numpy as np
 
 # path to the files
 
-path = r'\\europe.bmw.corp\WINFS\Panama\PLW_FG_e1\BDP\AIBB\AcousticAnalytics\10_BusinessSolutions\EngineersShazam\40_Data\Technical-Service\Brake squeking noises CS region\G30 Brake squeking noises (G463542)\renamed'
+path = r'path_of_the_directory_containing_the_files_to_be_renamed'
 
 # stand base name for the files specific to a certain type of task
 
-basename = str('brknoise_techserv_G30_brk_G463542_')
-# path_save = r'P:\C\CA_Bremse_FE\36_Bremse_Uebergreifend\Digitalisierung@Bremse\04_Products\09_Noise_Recognition\02_Messdaten\Technical_Service\Brake Noises DE\Bremsen Knarzen + Quietschen Videos\Renamed_data'
+basename = str('your_base_commaon_extension_to_every_file')
+# path_save = r''
 
 num_files = len(next(os.walk(path))[2])
 print(num_files)
@@ -20,7 +20,7 @@ print(length)
 count = 0
 flag = 0 
 
-df = pd.DataFrame(columns=['new_name', 'old_name', 'human result', 'acan result', 'comment', 'model'])
+df = pd.DataFrame(columns=['new_name', 'old_name'])
 
 for i in os.listdir(path):
     
